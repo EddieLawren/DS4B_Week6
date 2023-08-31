@@ -18,4 +18,19 @@ output:
 
 ## Loading the data
 
+```{r}
+library(tidyverse)
+```
+
+```{r}
+data <- read_csv("/Users/edwardlawrence/Desktop/Coursework/2023 - Y3S2/BIOL3207 - Data Science for Biologists/Quiz/DS4B_Week6/raw_data/data.csv")
+```
+
+
 ## An interesting plot
+
+```{r}
+data %>% ggplot(aes(x=TempC, y=VO2_ml_per_h, color=weight, shape=Sex)) + 
+  geom_point()
+```
+
